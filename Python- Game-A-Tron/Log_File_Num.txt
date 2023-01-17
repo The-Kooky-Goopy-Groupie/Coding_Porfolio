@@ -1,0 +1,26 @@
+
+------------------------------------------------------------------------------------------------------
+ - Num - Game Recorded as a LOSS - Num - 
+ Hidden Number Value 10  
+ Total Number of Guesses -  3 
+ Guesses Used -  3
+------------------------------------------------------------------------------------------------------
+ - Num - Game Recorded as a LOSS - Num - 
+ Hidden Number Value 30  
+ Total Number of Guesses -  7 
+ Guesses Used -  7
+------------------------------------------------------------------------------------------------------
+ - Num - Game Recorded as a LOSS - Num - 
+ Hidden Number Value 650  
+ Total Number of Guesses -  10 
+ Guesses Used -  10
+------------------------------------------------------------------------------------------------------
+ - Num - Game Recorded as a LOSS - Num - 
+ Hidden Number Value 1  
+ Total Number of Guesses -  3 
+ Guesses Used -  3
+------------------------------------------------------------------------------------------------------
+ - Num - Game Recorded as a LOSS - Num - 
+ Hidden Number Value 6  
+ Total Number of Guesses -  3 
+ Guesses Used -  3
