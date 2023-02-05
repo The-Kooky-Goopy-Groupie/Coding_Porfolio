@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Lark Submission Form</title>
+   <link rel="stylesheet" href="css/styles.css" />
+   <script type="text/javascript" src="js/lark-form.js"></script>
+</head>
+<body>
+<form method="get" action="" id="mainForm">
+   <fieldset>
+      <legend>Unix LARK Submission description</legend>
+      <table>
+         <tr>
+            <td colspan="2">
+               <p>
+               <label>Title</label><br/>
+               <input type="text" name="title" id="title" class="required hilightable" />
+               </p>
+               <p>
+               <label>Description</label><br/>
+               <input type="text" name="description" id="description" class="required hilightable">
+               </p>            
+            </td>
+         </tr>
+         <tr>
+            <td> 
+               <p> 
+               <label>Genre</label><br/>
+               <select name="genre" class="hilightable">
+                  <option>Choose genre</option> 
+                  <option>Puzzle</option>
+                  <option>Dungeon Crawler</option>
+                  <option>RPG</option>
+                  <option>Fighting</option>
+               </select>
+               </p>
+               <p> 
+               <label>Subject</label><br/>
+               <select name="subject" class="hilightable">
+                  <option>Choose game subject</option>
+                  <option>Survival</option>
+                  <option>Best Score</option>
+                  <option>Explore</option>
+               </select>
+               </p>
+               <p>	
+               <label>Medium</label><br/>               
+               <input type="text" name="medium" id="medium" class="hilightable"/>
+               </p>
+               <p>	
+               <label>Year Published</label><br/>
+               <input type="text" name="year" id="year" class="hilightable required"/>
+               </p>  
+               <p>	
+               <label>Professor Email</label><br/>
+               <input type="text" name="professor" id="professor" class="hilightable"/>
+               </p>                             
+            </td>
+            <td>
+               <div class="box">
+                  <label>Type </label><br/>
+                  <input type="radio" name="type" value="1" checked>Linux Bash<br/>
+                  <input type="radio" name="type" value="2">WebGL<br/>
+               </div>
+               <div class="box">
+                  <label>Creative Commons Specification </label><br/>
+                  <input type="checkbox" name="cc" >Attribution <br/>
+                  <input type="checkbox" name="cc" >Noncommercial <br/>    
+                  <input type="checkbox" name="cc" >No Derivative Works <br/>  
+                  <input type="checkbox" name="cc" >Share Alike<br/>
+                  <input type="checkbox" name="cc" >Keep Private
+               </div>               
+            </td>
+         </tr>
+ 
+         <tr>
+            <td colspan="2">
+               <div class="rectangle centered"> 
+                  <input type="submit" class="btn"> <input type="reset" value="Clear Form" class="btn">      
+               </div>
+            </td>
+         </tr>
+      </table>
+   </fieldset>
+</form>
+</body>
+</html>
