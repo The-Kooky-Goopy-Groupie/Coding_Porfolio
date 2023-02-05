@@ -1,0 +1,170 @@
+<!DOCTYPE html><!-- Dylan Gartin's Assignment 10/02/2021-->
+<!-- Minalistic Pallet used: White, Yuri Purple Shades for the main colors, and A dark Grey to commplement the White Text and Purple, Black has also been added to the pallet this time as well for the cards.-->
+<!-- Font's Used - Times New Roman for most text and century gothic for headings-->
+
+<!--Design Idea - an updated Yuri's Collection Agency, Based on a phrase floating Disk in the Game says, make an entire advert for Yuri's team, Based on this phrase. this one is updated with the new knowledge we obtained this lecture to apply responsive design.
+Meant to be styled to look a bit older but still easy to read. and also look like it was some sort of promotional hub for the game to show off units and get a feel for the groups used in the game-->
+
+<!-- Resposive Design elements -  entire webpage responds well to scaleing due to a column and card based structure, using 1 and 2 columns for most of the design as well even 4 column at the end of the page to produce an interesting effect. also updated pallet and addtional design elemtns made as well to enhance User expirence-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Yuri's Collection Agency | Join Team Yuri | Red Alert</title>
+    <!-- Bootstrap -->
+    <link href="Style.css" rel="stylesheet">
+  </head>
+<body class="blackbkgn"> <!-- applies the dark puprle to the navbar -->
+	  
+
+	  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><!-- Navbar elements and classes -->
+       <a class="navbar-brand" href="#">Navbar</a>
+      
+	  
+       <div class="collapse navbar-collapse bg-dark" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            
+			  
+			 <li class="nav-item active">
+                <a class="nav-link" href="Index.html">- Home <span class="sr-only">(current)</span></a> <!-- this one here glows and allows you to go back to home-->
+             </li>
+			  
+			  
+             <li class="nav-item">
+               <a class="nav-link" href="#AboutTeamYuri">- About Yuri</a> <!-- this isthe same setup for all the other elements left looking disabled as there are no actual links to them yet -->
+             </li>
+			  
+			    <li class="nav-item">
+               <a class="nav-link" href="#YuriTottalyNotFabricatedReviews">- Reviews</a><!-- same as above -->
+             </li>
+			  
+			  <li class="nav-item">
+               <a class="nav-link" href="#MeetTheTeam">- Meet the Crew</a>
+             </li> 
+	     </ul>
+       </div>
+  </nav> <!-- Navbar elements and classes ends here -->
+	  	
+	
+<div class="jumbotron jumbotron-fluid text-center"> <!--This area makes up the entire header lander with  title and text, and portrait of yuri-->
+         <header> 
+        <h1>Yuri's Collection Agency</h1> <!--Titles to appear in the header-->
+        <h2>"Be One with Yuri." - The Glorius Yuri</h2>
+    </header>
+  <img src="images/Yuri Hand.jpg" alt="Yuri" class="rounded-circle"> <!-- This is how to add images, this is one of yuri, and the round circle effect is applied to them--> 		
+</div>
+		   
+		   
+		   
+		   
+		   
+<div class="container"> <!-- The Main Container for the the entire site-->
+	  
+       <div class="row text-center"> <!-- used to introduce the class below -->
+         <div class="col-lg-6 offset-lg-3 offset-xl-0 col-xl-12 text-white">
+			
+			 
+		    <h2>Yuri's Plight</h2>
+		  
+			 The Yuri Faction needs your help!!! Yuri is running low on Credits, and needs you to help him get more to fund his war effort!
+         <div class="d-none d-lg-block"> <!-- Shortens the intro text on smaller webpages as to allow you to dive into content -->
+           Yuri, our glorious mastermind is here to fight off the Allied and Soviet forces from starting yet another war, by causeing his own war! This is good news good news! However, Yuri is in need of workers, so that's where you can help! Now you can join our glorious forces! Use either our phone number at the bottem of the page, or one of quick join buttons below! If you would perfer not to that's okay too! (for our mind control can fix that little problem.)
+				 </div>
+         </div>
+    </div>
+       <br>
+       <hr>
+       <br>
+	
+	
+       <div class="row"> <!-- This is how we set up the cards in the document -->
+         <div class="col-md-6">
+             <div class="card">
+               <img src="Images/UFO.jpg" alt="Yuri's UFO" height="300" class="card-img-top">
+               <div class="card-body">
+                  <h4 class="card-title">How You Can Help!</h4>
+                  <p class="card-text">This Is Yuri's Floating Disk, The pride and joy of his collection agency.
+            Not only does it look stylish but this bad boy can allow use to relocate valuble credits to our glorious team! 
+            We have thousands of these disk ready for use, but we really need more pilots, so that is why we are now recuriting for our great team.
+            So, ever wanted to enact being an alien but in real life? 
+            Well now you can! 
+            Sure the mortality rate is rather high, but you must agree that this is worth it no? So please sign up for our forces now! If your still on the fence about it feel free to submit to our mind contorl to help you!
+         </p>
+       			 <div> <!--This is how we built our buttons, we had to use a class in a class in order to adjust the text, as the button class text seemed to fail by itself other then that however the buttons work and even have the logos insdie them!-->
+         <div class="button"><a href src="#Contact_Yuri's_Collection_Agency">  <img src="images/YURI_LOGO.png" alt="Yuri"> Be one with Yuri!</a></div>
+         </div>
+				 
+               </div>
+             </div>
+         </div>
+		   
+<!-- Below is the set-up for the cards which is done by using the card body classes-->		   
+<div class="col-md-6">
+             <div class="card">
+               <img src="Images/Yuriprime1.jpg" alt="Yuri's and Brutes" height="300" class="card-img-top">
+               <div class="card-body">
+                  <h4 class="card-title">Additional Positions Avalible!</h4>
+                  <p class="card-text">
+		    We also now have additonal positions avalible! 
+            Our brutes division needs addtional soilders to fight alongside our forces.
+		    Well we have simplified this process to a "T" because now all you need for these level of gains is to use our Genetic Mutator.
+            This may cause internal brain damage and make you unable to resit our mind control powers, but just look at those gains! 
+            You could crush a tank like that! 
+            This may cause internal brain damage and make you unable to resit our mind control powers, but just look at those gains! 
+            You could crush a tank like that! 
+            In fact, We'll let you crush a tank like that!
+			     </p>
+       			 <div> <!--This is how we built our buttons, we had to use a class in a class in order to adjust the text, as the button class text seemed to fail by itself other then that however the buttons work and even have the logos insdie them!-->
+         <div class="button"><a href src="#Contact_Yuri's_Collection_Agency">  <img src="images/YURI_LOGO.png" alt="Yuri"> Become a Brute Today!</a></div>
+         </div>
+				 
+               </div>
+             </div>
+         </div>
+
+	  
+	  </div>
+  </div>
+       <br/>
+       <br/>
+    
+	  
+	  <div class="row"> <!-- We really don't have much else content wise we wanted to add here but found an interesting use for the col's, making dashline seperations, which is used here, i thought this was kind of neat-->
+        <div class="col-md-3 text-center">
+             <div class="card"></div>
+        </div>
+          <div class="text-center col-md-3">
+             <div class="card"></div>
+          </div>
+		  <div class="text-center col-md-3">
+            <div class="card"></div>
+        </div>
+		  <div class="text-center col-md-3">
+             <div class="card"></div>
+          </div>
+</div>
+	  
+	  
+       <br>
+       <hr>
+       <div class="row">
+         <div class="text-center col-lg-12">
+<footer> <!-- This is where the Footer goes which ends the document, which has been rebuilt for this webpage-->
+    <div  class="white"> <!--Class white is once again used to overide links text from being blue/purple-->
+    <p><strong>Call - <a href ="tel:9999990000">(999)-999-0000</a>  - for any needed additional information </strong></p>
+    <p></p>
+    <p><em>Copyright 2021 - Yuri Faction </em></p>
+    <p></p>
+    <p> Visit our other Sites for the <a href="#Allies">Allies</a> and the <a href="#Soviets">Soviets</a> to explore the other factions.</p>
+</div>
+</footer>
+       </div>
+       </div>
+	
+	<!-- All of the art items from Red Alert 2 - Yuri's Revenge, all right is reserved to Westwood Studios, and site is only used for assignment purposes,
+ and yes I did havee fun making this and trying to style it as more of an old school webpage to fits the time period, -->
+	
+  </body>
+</html>

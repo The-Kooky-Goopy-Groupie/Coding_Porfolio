@@ -1,0 +1,62 @@
+
+/*Used to build the header section and center it*/header {
+    color: white;
+    background-color:rgb(127, 17, 202);
+    text-align: center;
+}
+
+
+/*Used to build the footer*/footer {
+    color: white;
+    background-color:rgb(127, 17, 202);
+    
+}
+
+/*Used to change the font type of headers*/h1, h2, h3 {
+    font-family: "Century Gothic", "Lucida Grande", Tahoma, sans-serif;
+}
+/*Used to build the general rules needed for the sheet*/body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #4d4b4b;
+    color: white
+}
+/*Used to build the navigation box*/#navigation {
+    color: white;
+    text-align: center;
+    border: 3px solid rgb(127, 17, 202);
+	color: #FFFFFF;
+    background-color: white;
+}
+
+
+/*used to change any fonts to white if they act up*/.white a {
+    color: white;
+}
+
+/*Used to build the yuri buttons*/.button { 
+	width: 200px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	text-align: center;
+	vertical-align: left;
+	border-radius: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	transition: all 0.3s linear;
+}
+
+/*Used to center images*/.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
