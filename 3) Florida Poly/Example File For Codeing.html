@@ -1,0 +1,93 @@
+<!DOCTYPE html><!-- Used to Define that It's HTML along with the html -->
+<html>
+  <head><!-- This is used as an area to define the title of the site -->
+    
+    <!-- definitions for the  Stylization
+      
+        header, footer { 
+        will edit the header and footer sections to have these colors
+        }
+
+        h1, h2, h3 {
+        Adjust the font family to match that listed as said under the text
+        }
+
+        body {
+            Same as Header but is body font in general, thus will apply tyo anything that is not a header
+        }
+
+        .navigation a {
+            used to format the navigation links, as defined by a Class
+        }
+
+        #pond {
+            Change the Color of Font based On ID
+        }
+  
+    -->
+      <style>
+        header, footer {
+            color: white;
+            background-color: gray;
+        }
+        h1, h2, h3 {
+            font-family: "Trebuchet MS", "Lucida Grande", Tahoma, sans-serif;
+        }
+        body {
+            font-family: Georgia, Cambria, "Times New Roman", serif;
+        }
+        .navigation a {
+            color: white;
+        }
+        #pond {
+            color: red;
+        }
+  
+      </style>
+
+    <title>This is where the Title Goes</title> <!-- This is where the title goes, appears in the Tab -->
+
+   </head>
+
+
+<!-- This is where the Body Begins, which is where the Main Text is.-->
+   <body>
+    <header> <!-- This is where the Header goes, which will appear at the top of the page.-->
+        <h1>Share Your Travels</h1> <!-- This is a Level 1 Heading, the Highest level of heading-->
+        <p>let us know where you've been</p><!-- This is normal text, which will be printed via p -->
+   
+    <nav class="navigation"> <!-- This is defineing a style using a class, which defines and uses the normal class. afeects only text of the type inside of it-->
+       <a href="#">Description</a> <!-- <a href="link">text</a> creates a hyperlink -->
+       <a href="#">Related Photos</a>
+       <a href="#">Reviews</a>
+     </nav>
+
+    </header>
+         <h2>Central Park</h2><!-- This is a Level 2 Heading, smaller then a level one-->
+         
+         <div> <!-- This is  Div which is used to divide items-->
+            <img src="images/central-park.jpg" alt="Central Park"> <!-- This is how to add images -->
+             <p><em>Conservatory Pond in Central Park</em></p> <!-- <em> is used to Italicazie, <strong> is bold-->
+         </div>
+
+        <div id="pond"> <!-- This is is Div which uses ID in order to change How the text format-->
+        <p>This is a duck photo of Conservatory Pond in
+         <a href="http://www.centralpark.com/">Central Park</a> <!--An Example of a Link, box the link then define the text for it--> in New York City was taken on October 22, 2011 with a Canon EOS 30D camera.
+         </p> 
+         </div>
+
+    <footer> <!-- This is where the Footer goes which ends the document-->
+       <p><em>Copyright 2017 Share Your Travels </em></p>
+    </footer>
+    
+</body> <!-- in order to end things you must use the / -->
+
+<!--
+
+div a {color: blue;}                     this will turn anchor fonts that are in a div the color blue
+.first p{background-color: lightgray;}   this will turn a paragraph ‘s background the color of light gray if it is part of the “first” class.
+#second {}                               this will turn everything in the “second” ID 
+
+-->
+
+</html>
