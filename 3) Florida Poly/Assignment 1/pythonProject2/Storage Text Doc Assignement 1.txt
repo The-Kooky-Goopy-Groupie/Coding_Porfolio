@@ -1,0 +1,618 @@
+
+
+
+
+
+
+
+
+
+#Histogram for base image
+histogram_base = cv2.calcHist(base_image_file, [0], None, [256], [0,256])
+plt.hist(base_image_file.ravel(),256,[0,256])
+
+histogram_edited = cv2.calcHist(edited_image_file, [0], None, [256], [0,256])
+plt.hist(edited_image_file.ravel(),256,[0,256])
+plt.title('Histogram for the Images')
+plt.show()
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Code for brightness / contrast^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+from __future__ import print_function
+from builtins import input
+import cv2 as cv
+import numpy as np
+import argparse
+# Read image given by user
+parser = argparse.ArgumentParser(description='Code for Changing the contrast and brightness of an image! tutorial.')
+parser.add_argument('--input', help='Path to input image.', default='lena.jpg')
+args = parser.parse_args()
+image = cv.imread(cv.samples.findFile(args.input))
+if image is None:
+    print('Could not open or find the image: ', args.input)
+    exit(0)
+new_image = np.zeros(image.shape, image.dtype)
+alpha = 1.0 # Simple contrast control
+beta = 0    # Simple brightness control
+# Initialize values
+print(' Basic Linear Transforms ')
+print('-------------------------')
+try:
+    alpha = float(input('* Enter the alpha value [1.0-3.0]: '))
+    beta = int(input('* Enter the beta value [0-100]: '))
+except ValueError:
+    print('Error, not a number')
+# Do the operation new_image(i,j) = alpha*image(i,j) + beta
+# Instead of these 'for' loops we could have used simply:
+# new_image = cv.convertScaleAbs(image, alpha=alpha, beta=beta)
+# but we wanted to show you how to access the pixels :)
+for y in range(image.shape[0]):
+    for x in range(image.shape[1]):
+        for c in range(image.shape[2]):
+            new_image[y,x,c] = np.clip(alpha*image[y,x,c] + beta, 0, 255)
+cv.imshow('Original Image', image)
+cv.imshow('New Image', new_image)
+# Wait until user press some key
+cv.waitKey()
+
+
+
+
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^CURRENT CODEEEEEEEEEEEEE^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+# import the cv2 library - Displays two videos, still needs histograms proprer saving and adjustment bars implemented correctly
+import cv2
+# Import this for the histogram
+import numpy as np
+from matplotlib import pyplot as plt
+# Create a VideoCapture object and read from input file
+# If the input is the camera, pass 0 instead of the video file name
+#cap is the starting default video, Cappy is the edited copy of the vide
+base_image_file = cv2.VideoCapture('Video.mp4')
+edited_image_file = cv2.VideoCapture('Video.mp4')
+
+# Check if camera opened successfully
+if (base_image_file.isOpened() == False):
+    print("Error opening video stream or file: Default video ")
+
+if (edited_image_file.isOpened() == False):
+    print("Error opening video stream or file: Editing Video did not display")
+
+# Read until video is completed
+while (base_image_file.isOpened()):
+
+# Capture frame-by-frame
+    ret, frame = base_image_file.read()
+    ret1, frame2 = edited_image_file.read()
+    if ret == True:
+
+# Display the resulting frame of the video
+        cv2.imshow('Base Video', frame)
+        cv2.imshow('Video Adjustment', frame2) #Note Framer is
+
+# loop the video once it reaches the end
+    if ret == False:
+        base_image_file = cv2.VideoCapture('Video.mp4')
+        edited_image_file= cv2.VideoCapture('Video.mp4')
+        ret, image = base_image_file.read()
+        ret1, image2 = edited_image_file.read()
+#Histogram for base image
+
+
+# Press Q on keyboard to exit the video program
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        break
+
+        if cv2.waitKey(25) & 0xFF == ord('s'):
+            # save the changes to the video and then exit
+            ret, frame2 = edited_image_file.read()
+            result = cv2.VideoWriter('Edited.mp4', cv2.VideoWriter_fourcc(*'MPEG'), 10, size)  # needs fixing
+            result.write(frame2)
+            cv2.imshow('Video Adjustment', frame2)
+        break
+
+
+cv2.destroyAllWindows()
+
+histogram_base = cv2.calcHist(base_image_file, [0], None, [256], [0, 256])
+plt.hist(base_image_file.ravel(), 256, [0, 256])
+
+histogram_edited = cv2.calcHist(edited_image_file, [0], None, [256], [0, 256])
+plt.hist(edited_image_file.ravel(), 256, [0, 256])
+plt.title('Histogram for the Images')
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import the cv2 library - Displays two videos, still needs histograms proprer saving and adjustment bars implemented correctly
+import cv2
+# Import this for the histogram
+import numpy as np
+from matplotlib import pyplot as plt
+# Create a VideoCapture object and read from input file
+# If the input is the camera, pass 0 instead of the video file name
+#cap is the starting default video, Cappy is the edited copy of the vide
+cap = cv2.VideoCapture('Video.mp4')
+cap1 = cv2.VideoCapture('Video.mp4')
+
+# Check if camera opened successfully
+if (cap.isOpened() == False):
+    print("Error opening video stream or file: Default video ")
+
+if (cap1.isOpened() == False):
+    print("Error opening video stream or file: Editing Video did not display")
+
+# Read until video is completed
+while (cap.isOpened()):
+
+# Capture frame-by-frame
+    ret, frame = cap.read()
+    ret1, frame2 = cap1.read()
+    if ret == True:
+
+# Display the resulting frame of the video
+        cv2.imshow('Base Video', frame)
+        cv2.imshow('Video Adjustment', frame2) #Note Framer is
+# loop the video once it reaches the end
+    if ret == False:
+        cap = cv2.VideoCapture('Video.mp4')
+        cap1 = cv2.VideoCapture('Video.mp4')
+        ret, image = cap.read()
+        ret1, image2 = cap1.read()
+
+# Press Q on keyboard to exit the video program
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        break
+    if cv2.waitKey(25) & 0xFF == ord('s'):
+        #save the changes to the video and then exit
+        break
+
+
+cap.release()
+cap1.release()
+cv2.destroyAllWindows()
+
+
+
+# Code that displays the Histogram does that correctly but stops the video from playing proper- video makes the histogram for 1 frame
+histogram = cv2.calcHist([frame2], [0], None, [256], [0, 256])
+plt.plot(histogram, color='k')
+plt.show(block = false)
+
+
+
+
+# Code set that does save an MP4 - but not properly and has an error that i can not solve.
+
+
+
+
+# import the cv2 library
+import cv2
+# Import this for the histogram
+import numpy as np
+from matplotlib import pyplot as plt
+
+# Create a VideoCapture object and read from input file
+# If the input is the camera, pass 0 instead of the video file name
+#cap is the starting default video, Cappy is the edited copy of the vide
+cap = cv2.VideoCapture('Video.mp4')
+cap1 = cv2.VideoCapture('Video.mp4')
+
+# get the dimesntions of the edit frame so that way we can put them into the function to save them
+frame_width = int(cap1.get(3))
+frame_height = int(cap1.get(4))
+
+size = (frame_width, frame_height)
+
+
+# Check if camera opened successfully
+if (cap.isOpened() == False):
+    print("Error opening video stream or file: Default video ")
+
+if (cap1.isOpened() == False):
+    print("Error opening video stream or file: Editing Video did not display")
+
+# Read until video is completed
+while (cap.isOpened()):
+
+# Capture frame-by-frame
+    ret, frame = cap.read()
+    ret1, frame2 = cap1.read()
+    if ret == True:
+
+# Display the resulting frame of the video
+        cv2.imshow('Base Video', frame)
+        cv2.imshow('Video Adjustment', frame2) #Note the different names lets it be different frames
+
+#test to see if makes histogram
+
+# loop the video once it reaches the end
+    if ret == False:
+        cap = cv2.VideoCapture('Video.mp4')
+        cap1 = cv2.VideoCapture('Video.mp4')
+        ret, image = cap.read()
+        ret1, image2 = cap1.read()
+
+
+# Press Q on keyboard to exit the video program
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        break
+    if cv2.waitKey(25) & 0xFF == ord('s'):
+        # save the changes to the video and then exit
+        ret, frame2 = cap1.read()
+        result = cv2.VideoWriter('Edited.mp4', cv2.VideoWriter_fourcc(*'MPEG'), 10, size) #needs fixing
+        result.write(frame2)
+        cv2.imshow('Video Adjustment', frame2)
+
+        break
+
+# release the other video items as to not take data
+cap.release()
+cap1.release()
+cv2.destroyAllWindows()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# and then this stuff makes the bars but this only seems to work for images
+
+import cv2
+ 
+def BrightnessContrast(brightness=0):
+    
+    # getTrackbarPos returns the current
+    # position of the specified trackbar.
+    brightness = cv2.getTrackbarPos('Brightness',
+                                    'GEEK')
+     
+    contrast = cv2.getTrackbarPos('Contrast',
+                                  'GEEK')
+ 
+    effect = controller(img, brightness,
+                        contrast)
+ 
+    # The function imshow displays an image
+    # in the specified window
+    cv2.imshow('Effect', effect)
+ 
+def controller(img, brightness=255,
+               contrast=127):
+   
+    brightness = int((brightness - 0) * (255 - (-255)) / (510 - 0) + (-255))
+ 
+    contrast = int((contrast - 0) * (127 - (-127)) / (254 - 0) + (-127))
+ 
+    if brightness != 0:
+ 
+        if brightness > 0:
+ 
+            shadow = brightness
+ 
+            max = 255
+ 
+        else:
+ 
+            shadow = 0
+            max = 255 + brightness
+ 
+        al_pha = (max - shadow) / 255
+        ga_mma = shadow
+ 
+        # The function addWeighted calculates
+        # the weighted sum of two arrays
+        cal = cv2.addWeighted(img, al_pha,
+                              img, 0, ga_mma)
+ 
+    else:
+        cal = img
+ 
+    if contrast != 0:
+        Alpha = float(131 * (contrast + 127)) / (127 * (131 - contrast))
+        Gamma = 127 * (1 - Alpha)
+ 
+        # The function addWeighted calculates
+        # the weighted sum of two arrays
+        cal = cv2.addWeighted(cal, Alpha,
+                              cal, 0, Gamma)
+ 
+    # putText renders the specified text string in the image.
+    cv2.putText(cal, 'B:{},C:{}'.format(brightness,
+                                        contrast), (10, 30),
+                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+ 
+    return cal
+ 
+if __name__ == '__main__':
+    # The function imread loads an image
+    # from the specified file and returns it.
+    original = cv2.imread("pic.jpeg")
+ 
+    # Making another copy of an image.
+    img = original.copy()
+ 
+    # The function namedWindow creates a
+    # window that can be used as a placeholder
+    # for images.
+    cv2.namedWindow('GEEK')
+ 
+    # The function imshow displays an
+    # image in the specified window.
+    cv2.imshow('GEEK', original)
+ 
+    # createTrackbar(trackbarName,
+    # windowName, value, count, onChange)
+     # Brightness range -255 to 255
+    cv2.createTrackbar('Brightness',
+                       'GEEK', 255, 2 * 255,
+                       BrightnessContrast)
+     
+    # Contrast range -127 to 127
+    cv2.createTrackbar('Contrast', 'GEEK',
+                       127, 2 * 127,
+                       BrightnessContrast) 
+ 
+     
+    BrightnessContrast(0)
+ 
+# The function waitKey waits for
+# a key event infinitely  or for delay
+# milliseconds, when it is positive.
+cv2.waitKey(0)
+
+
+
+
+
+
+
+
+
+
+BACKUP 
+
+
+
+
+# import the cv2 library
+import cv2
+# Import this for the histogram
+import numpy as np
+from matplotlib import pyplot as plt
+
+# Create a VideoCapture object and read from input file
+# If the input is the camera, pass 0 instead of the video file name
+#cap is the starting default video, Cappy is the edited copy of the vide
+cap = cv2.VideoCapture('Video.mp4')
+cap1 = cv2.VideoCapture('Video.mp4')
+
+# get the dimesntions of the edit frame so that way we can put them into the function to save them
+frame_width = int(cap1.get(3))
+frame_height = int(cap1.get(4))
+
+size = (frame_width, frame_height)
+
+# Check if camera opened successfully
+if (cap.isOpened() == False):
+    print("Error opening video stream or file: Default Video did not display")
+
+if (cap1.isOpened() == False):
+    print("Error opening video stream or file: Editing Video did not display")
+
+# Read until video is completed
+while (cap.isOpened()):
+
+# Capture frame-by-frame
+    ret, frame = cap.read()
+    ret1, frame2 = cap1.read()
+#test to see if makes histogram
+    histogram = cv2.calcHist([frame2], [0], None, [256], [0, 256])
+    plt.plot(histogram, color='k')
+    plt.show(block = False)
+
+    if ret == True:
+
+# Display the resulting frame of the video
+        cv2.imshow('Base Video', frame)
+        cv2.imshow('Video Adjustment', frame2) #Note the different names lets it be different frames
+
+# loop the video once it reaches the end
+    if ret == False:
+        cap = cv2.VideoCapture('Video.mp4')
+        cap1 = cv2.VideoCapture('Video.mp4')
+        ret, image = cap.read()
+        ret1, image2 = cap1.read()
+
+# Press Q on keyboard to exit the video program
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        break
+    if cv2.waitKey(25) & 0xFF == ord('s'):
+        # save the changes to the video and then exit
+        ret, frame2 = cap1.read()
+        result = cv2.VideoWriter('Edited.mp4', cv2.VideoWriter_fourcc(*'MPEG'), 10, size) #needs fixing
+        result.write(frame2)
+        cv2.imshow('Video Adjustment', frame2)
+        break
+
+# release the other video items as to not take data
+cap.release()
+cap1.release()
+cv2.destroyAllWindows()
+
+
+
+
+
+
+
+
+# import the cv2 library - Displays two videos, still needs histograms proprer saving and adjustment bars implemented correctly
+import cv2
+# Import this for the histogram
+import numpy as np
+from matplotlib import pyplot as plt
+# Create a VideoCapture object and read from input file
+# If the input is the camera, pass 0 instead of the video file name
+#cap is the starting default video, Cappy is the edited copy of the vide
+cap = cv2.VideoCapture('Video.mp4')
+cap1 = cv2.VideoCapture('Video.mp4')
+
+# Check if camera opened successfully
+if (cap.isOpened() == False):
+    print("Error opening video stream or file: Default video ")
+
+if (cap1.isOpened() == False):
+    print("Error opening video stream or file: Editing Video did not display")
+
+# Read until video is completed
+while (cap.isOpened()):
+
+# Capture frame-by-frame
+    ret, frame = cap.read()
+    ret1, frame2 = cap1.read()
+    if ret == True:
+
+# Display the resulting frame of the video
+        cv2.imshow('Base Video', frame)
+        cv2.imshow('Video Adjustment', frame2) #Note Framer is
+
+# Code that displays the Histogram does that correctly but stops the video from playing proper- video makes the histogram for 1 frame
+        histogram = cv2.calcHist([frame2], [0], None, [256], [0, 256])
+        plt.plot(histogram, color='k')
+        fig.canvas
+
+
+# loop the video once it reaches the end
+    if ret == False:
+        cap = cv2.VideoCapture('Video.mp4')
+        cap1 = cv2.VideoCapture('Video.mp4')
+        ret, image = cap.read()
+        ret1, image2 = cap1.read()
+
+
+# Press Q on keyboard to exit the video program
+    if cv2.waitKey(25) & 0xFF == ord('q'):
+        break
+    if cv2.waitKey(25) & 0xFF == ord('s'):
+        #save the changes to the video and then exit
+        break
+
+
+cap.release()
+cap1.release()
+cv2.destroyAllWindows()
+
+
+
+
