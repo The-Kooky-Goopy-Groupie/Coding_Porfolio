@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Hero
+{
+	/*color:whitesmoke; swap this out with better coloring here*/
+	width: 100%;
+	background-color: cadetblue;
+	
+}
+.HeroAbout
+{
+		color:whitesmoke;
+	width: 100%;
+	background-color: cadetblue;
+	width:90%;
+	
+}
+.AbtTop
+{
+	
+}
+.HeroImg img
+{
+	width:100%;
+	height:100%;
+}
+.Information
+{
+	background-color: #102271;
+	color:antiquewhite;
+	padding-left: 10px;
+
+}
+body
+{
+	color:black;
+	background-color:darkslategrey;
+}
+.Top
+{
+	display: grid;
+	gap:0%;
+	grid-template-columns: 70% 30%;
+}
+/*Defines format for the transport keys in the top of the page.*/
+.topTransport{
+	width: 100%;
+	background-color: #102271;
+}
+
+/*Defines how individual buttons should look for the transport keys, including sized text.*/
+.topTransport a{
+  display: block;
+  color: #C9CFC6;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+/*Indicates to the user that a transport key is selected, letting them press it to travel now.*/
+.topTransport a:hover {
+  background-color: #0045A2;
+  color: #C9CFC6;
+}
+.ProductImg img
+{
+	/*this is to define product images, size should be set on image as 400 by 400*/
+}
+.Footers_Temp footer{
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	width: 100%;
+	background-color: cadetblue;
+}
+
+/*things to fix in style sheet: 
+H1 is smaller then H2, this makes no sense
+better color pallent for the text on the light blue backgrond*/

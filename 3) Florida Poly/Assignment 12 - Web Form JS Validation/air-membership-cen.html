@@ -1,0 +1,184 @@
+<!doctype html>
+<!-- HW 11 10/23/2021 New flavair subscription page that is totally being used for completely legal and not unethical means-->
+<html>
+<head>
+<meta charset="utf-8">
+	<!--Links to our Java and CSS style sheets-->
+	<script type = "text/javascript" language = "javascript" src = "JSS/membershipForm.js"></script>
+	<link rel = "stylesheet" href = "CSS/Style_and_Grace.css">
+	<!--title for the tab-->
+	<title>Flavair Lakeland's Bottled Air | Subscritption to FlavAir  </title>
+</head>
+
+<body>
+	<!--This is used to set-up the Navbar that is at the top of the page-->
+	<nav class = "topTransport">
+		<a href="index.html">Home</a>
+		<a href="About-us.html" id ="About">About</a>
+		<a href="Shop_Outline.html" id = "Shop">Shop</a>
+		<a href = "air-membership-cen.html" id = "Membership">Subscritption to FlavAir Form</a>
+	</nav>
+	
+	
+	<!--this section is used to let people know about our amaszin product-->
+	<section class = "Introduction">
+		<h1>The Flavair Weekly Package Plan</h1>
+		<h2>A New breathtaking way to breathe</h2>
+<p> So your sold on finally adding in some flavor? Ready to spice things up? </p>
+<p>Sign up below for our new flavor plan! </p>
+<p>This will automatically e-mail you our latest air products to your home! Done by using brand new e-mail to mail air technology, we can now send FlavAir to you across the internet!</p>
+<p>Just fill out all of the following information to confirm and pick your subscription*</p>
+<p>__________</p> <!-- Used to give the bottem of the section some breathing room -->
+</section>
+
+
+
+	<!--This is the header file for the.-->
+	<section class = "Form">
+		<form method = "get" action = "#" id = "FullForm">
+			<fieldset>
+				<!--Heading for the form-->
+				<h2>FlavAir Weekly Sign Up</h2>
+			
+
+		
+
+
+
+				<!--Header for asking for your info-->
+				<section class = "Information">
+					<label> <h3>Your Information<h3> </label>
+				</section>
+
+
+				<section>
+					<br>
+					<!--First Name Input Field-->
+					<label>- First Name - </label>
+					<input type = "text" name = "fName" id = "fname" class = "FormInput">
+					
+					<!--Displays error if no first name-->
+					<div class = "hidden" id = "firstnameError">
+						<p>The following field is currently needing data: First Name</p>
+					</div>
+					
+
+
+					<!--Last Name Input Field-->
+					<label><br>- Last Name - </label>
+					<input type = "text" name = "lName" id = "lname" class = "FormInput">
+					
+					<!--Displays error if no first name-->
+					<div class = "hidden" id = "lastnameError">
+						<p>The following feild is currently needing data: Last Name</p>
+					</div>
+					
+
+					<!-- phone number Input field.-->
+					<label><br>-Phone Number-</label>
+					<input type = "text" name = "phoneNum" id = "phone" class = "FormInput">
+					
+					<!--Error message for phone number having invalid characters-->
+					<div class = "hidden" id = "phoneError">
+						<p>You can only use numbers and dashes silly goose</p>
+					</div>
+					
+
+
+					<!--email Input field.-->
+					<label><br>-Email Address-</label>
+					<input type = "text" name = "email" id = "email" class = "FormInput">
+					
+					<!--Error for if the email is not correct -->
+					<div class = "hidden" id = "emailError">
+						<p>Please include an email that has an @ sign a period and all other info to make it valid</p>
+					</div>
+					
+
+					<!--Password  input field.-->
+					<label><br>- Email Password -</label>
+					<input type = "password" name = "password" id = "password" class = "FormInput">
+					<!--error messgae for invalid email password-->
+					<div class = "hidden" id = "passError">
+						<p>Please make sure your password is at least 6-9 characters has a number and letter in it, and perferibly links to a bankaccount</p>
+					</div>
+
+
+				</section>
+
+
+				<br>
+				<br>
+			
+			
+			<!--Radio button to select a type of subscritption plan-->
+			<section class = "Radio">
+				<label>Subscription Plans</label>
+				<br>
+				
+				<input type = "radio" id = "base" name = "subscription" value="Base">Basic Breaths - ($0.99 Weekly)<br />
+				
+				<input type = "radio" id = "pro" name = "subscription" value="Pro">Pro Puffs - ($9.99 Weekly)<br />
+				
+				<input type = "radio" id = "omega" name = "subscription" value="Omega">OMEGA OXYGENAX TECH - ($99.99 Weekly)<br />
+				
+				<!--Error messgae to let you know you failed to click one of these-->
+				<div class = "hidden" id = "radioError">
+					<p>You have to pick a subcritpion so we can Steal- i mean sell you our wonderful product!</p>
+				</div>
+			</section>
+			
+
+			<br>
+
+
+			<!--Prompts user to choose an air type-->
+			<section class = "Dropdown">
+				<label>Air Type</label>
+				<select name = "Quality">
+					<option>Tasty (+ $8.00 Weekly)</option>
+					<option>Extar O2 (+ $80.00 Weekly)</option>
+					<option>Flavored+ (+ $799.00 Weekly *BEST VALUE*)</option>
+				</select>
+			</section>
+
+			
+			<br>
+			<br>
+
+
+			<!--This area is used are used to make the buttons -->
+			<section class = "Buttons">
+				<button class = "Buttontype" type = "reset">Cancel and Reset</button>
+				<button class = "Buttontype" type = "submit" id = "submit">Submit and Buy Now!</button>
+			</section>
+			</fieldset>
+		</form>
+
+
+		<!--Let you know it worked so long as all the above items are valid-->
+	
+
+	</section>
+	
+	
+	
+	<p></p>
+	<!--Our Typical page footer-->
+	<footer>
+		<p><strong>Call Or Text - <a href ="tel:1234567890">(123)-456-7890</a>  - for any needed additional information </strong></p>
+       	<p></p>
+   		<p><em>Copyright 2021 - FlavAir - All Rights Resevred  </em></p>
+		<p><em>* Flavair is not legally resposible for hackers stealing this info</em></p>
+
+		<!--this is used to display the error message if it occures.-->
+<div id = "errors"></div>
+
+<div id = "Final" class = "hidden">
+	<p>Form completed!</p>
+</div>
+
+        <p></p>
+	</footer>
+</body>
+</html>

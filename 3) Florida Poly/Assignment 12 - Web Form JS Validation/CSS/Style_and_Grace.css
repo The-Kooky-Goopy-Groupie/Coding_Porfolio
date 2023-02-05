@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* CSS Document used to format the form page specifically */
+
+/*These are taken from the main CS sheet to transfer over the same styling to this new sheet*/
+
+/*Base webpage format*/
+
+/*Defines format for the transport keys in the top of the page.*/
+.topTransport{
+	width: 100%;
+	background-color: #102271;
+}
+
+/*Defines how individual buttons should look for the transport keys, including sized text.*/
+.topTransport a{
+  display: block;
+  color: #C9CFC6;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+/*Indicates to the user that a transport key is selected, letting them press it to travel now.*/
+.topTransport a:hover {
+  background-color: #0045A2;
+  color: #C9CFC6;
+}
+
+
+/*Defines body-specific detail to be applied throughout the majority of the webpage.*/
+body
+{
+	color:black;
+	background-color:darkslategrey;
+
+	text-align: center;
+}
+
+
+/*This is the info secttion reworked into a new introduction section*/
+.Introduction
+{
+	/*colors*/
+	color:antiquewhite;
+	background-color:  #0045A2;
+   
+	align-items: center;
+
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	
+}
+
+
+/* Main Form Format*/
+
+/*This is used for the form section of the document */
+.Form
+{
+	text-align:right;
+	color:antiquewhite;
+	font-weight:bold;
+	width: 100%;
+
+	background-color:cadetblue;
+	font-size: 130%;
+}
+/*Used to adjust the H2 font format*/
+.Form h2
+{
+	font-size:170%;
+	font-weight:bold;
+	text-align:center;
+	color: #102271;
+
+}
+/*used for our text input fields*/
+.FormInput
+{
+	width:65%;
+	
+	border: thick;
+	border-width:thick;
+	border-style: solid;
+	border-color: #02071f;
+	
+	margin-right:15%;
+	margin-bottom:3%;
+
+	font-weight:bold;
+	color:darkslateblue;
+}
+
+/*We use this here in order to adjust the information header*/
+.Information
+{
+	font-size:130%;
+	text-align:left;
+	font-weight:bold;
+	
+	margin-left:15%;
+	
+	color: #102271;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Dropdown and Radio Button stylein*/
+
+/*This defines how radio button's header label is presented*/
+.Radio label
+{
+	font-size:100%;
+	font-weight:bold;
+
+	margin-right: 0%;
+	margin-left:15%;
+	
+	color: #102271;
+}
+
+/*This defines how to present dropdown header label  is peresented*/
+.Dropdown label
+{
+	font-size:100%;
+	font-weight:bold;
+
+	margin-left:15%;
+
+	color: #102271;
+}
+/*used to adjust the size and position of our dropdown box*/
+.Dropdown select
+{
+	width:25%;
+    height:150%;
+
+	margin-left:10%;
+	
+}
+/*Used to change around our radio and dropdowns display setting*/
+.Radio, .Dropdown
+{
+	margin-left: 0%;
+    margin-right:0%;
+
+	text-align: left;
+}
+/*Changes the radio and dropdown input format*/
+.Radio input, .Dropdown input
+{
+	margin-right:0%;
+	margin-left:0%;
+	margin-bottom: 2%;
+
+	text-align:left;
+
+	width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Button format*/
+
+
+/*Defines main base setup of the buttons*/
+.Buttons
+{
+	display: grid;
+	text-align: center;
+
+	grid-template-columns: 50% 50%;
+}
+
+
+
+
+/*Main base style for the buttons*/
+.Buttontype
+{
+	
+	background-color:#102271;
+  	color: #C9CFC6;
+	
+	font-size: 120%;
+	flex-direction: column;
+	display: flex;
+	
+	margin-top: 15%;
+	margin-bottom: 15%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*Used to confirm that you just gave away your information!*/
+#Final
+{
+	padding-left: 0%;
+	padding-right:0%;
+	width:100%;
+	
+	font-size: 200%;
+	color:rgb(20, 78, 20);
+	text-align:center;
+}
+
+
+/*Error Message Section*/
+
+/*this hides the error until they are needed*/
+.hidden
+{
+	display: none;
+}
+/*when the errors become visible they use this format for the item*/
+.visible
+{
+	text-align:left;
+	color:maroon;
+	font-weight:bold;
+	width: 100%;
+	background-color:cadetblue;
+	font-size: 30;
+	display: contents;
+}
+/*This is all of the error messages format, they all share this same basic setup for such.*/
+#errors, #firstnameError, #lastnameError, #emailError, #phoneError, #radioError, #passError
+{
+	text-align:center;
+	color:maroon;
+	font-weight:bold;
+	width: 100%;
+	background-color:cadetblue;
+	font-size: 30;
+}
+
+
+
+
+/* This is our typical footer formating for the sheed*/
+footer{
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+
+	width: 100%;
+
+	background-color: cadetblue;
+}
