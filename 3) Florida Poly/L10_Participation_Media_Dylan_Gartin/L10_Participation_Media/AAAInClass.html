@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>AAAInClass</title>
+     <style>
+        section {
+           padding-top: 20px;
+           padding-bottom: 20px;
+        }
+
+     .relativePos figure{
+         border: 3px solid black;
+         background-color: antiquewhite;
+         padding: 5px;
+         width: 150px;
+         position: relative;
+        /*position: absolute;*/
+         /*top: 150px;*/
+         left: 200px;
+      }
+     .overlappingPos figure{
+        position: relative;
+     }
+     .overlappingPos figcaption{
+        color:white;
+        font-size: 1.1em;
+        padding: 5px;
+        position: absolute;
+        top: 120px;
+        left: 10px;
+     }
+     .hidden figure{
+        position: relative;
+     }
+     .hidden figcaption{
+        color:white;
+        font-size: 1.1em;
+        padding: 5px;
+        position: absolute;
+        top: 120px;
+        left: 10px;
+     }
+     .hide {
+        display:none;
+     }
+     /*.container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        !*grid-template-rows: 50px 30px 60px;*!
+        !*grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));*!
+     }*/
+       /* .containerGridArea {
+           grid-gap: 10px;
+           display: grid;
+           grid-template-rows: 100px 150px 100px;
+           grid-template-columns: 75px 1fr 1fr 1fr 1fr;
+           grid-template-areas: ". a1 a2 a3 a4"
+                        "b1 b2 b2 b2 b3"
+                        "b1 c1 c2 c2 c2";
+           !*grid-template-areas: "a1 a2 a3 a4 b3"
+                        "b1 b2 b2 b2 b3"
+                        "b1 . c2 . b3";*!
+        }
+        .a1 { grid-area: a1; }
+        .a2 { grid-area: a2; }
+        .a3 { grid-area: a3; }
+        .a4 { grid-area: a4; }
+
+        .b1 { grid-area: b1; }
+        .b2 { grid-area: b2; }
+        .b3 { grid-area: b3; }
+        .c1 { grid-area: c1; }
+        .c2 { grid-area: c2; }
+        .yellow {background-color: yellow;}
+        .orange {background-color: orange;}
+        .cyan {background-color: cyan;}*/
+
+   </style>
+</head>
+<body>
+<header>
+
+  <nav>
+
+  </nav>
+</header>
+<main>
+<section>
+   <div class="relativePos">
+      <h1>Relative vs absolute</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Pellentesque nec faucibus libero, vitae fermentum felis. In
+         tristique risus eget ipsum tristique, vel dictum nunc auctor.
+         Curabitur aliquet turpis eu neque faucibus pellentesque.</p>
+         <figure><img src="images/travel/9498358806.jpg" alt="Duomo, Florence" />
+            <figcaption> Duomo Cathedral</figcaption>
+         </figure>
+         <p>Donec consectetur elit erat, eu molestie urna scelerisque id. Etiam
+            dapibus tellus a tempus luctus. Fusce at tempor diam. Praesent feugiat
+            blandit aliquet. Fusce rutrum, dolor ut dignissim mollis, magna justo
+            hendrerit ex, vel blandit neque ipsum ut nibh.</p>
+   </div>
+</section>
+   <section>
+   <div class="overlappingPos">
+      <h1>overlapping</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Pellentesque nec faucibus libero, vitae fermentum felis. In
+         tristique risus.</p>
+      <figure><img src="images/travel/9498358806.jpg" class="overlayed" alt="Duomo, Florence" />
+         <figcaption> Duomo Cathedral</figcaption>
+      </figure>
+      <p>Donec consectetur elit erat, eu molestie urna scelerisque id. Etiam
+         dapibus tellus a tempus luctus.</p>
+   </div>
+   </section>
+   <section>
+   <div class="hidden">
+      <h1>hidden</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+         Pellentesque nec faucibus libero, vitae fermentum felis. In
+         tristique risus.</p>
+      <figure><img src="images/travel/9498358806.jpg" class="overlayed" alt="Duomo, Florence" />
+         <figcaption> Duomo Cathedral</figcaption> <!--add hide to class-->
+      </figure>
+      <p>Donec consectetur elit erat, eu molestie urna scelerisque id. Etiam
+         dapibus tellus a tempus luctus.</p>
+   </div>
+   </section>
+<section>
+   <h1>Grid Structure</h1>
+   <div class="container">
+      <div style="background-color: blue;">A</div>
+   <div style="background-color: indianred;">B</div>
+   <div style="background-color: paleturquoise;">C</div>
+   <div style="background-color: gold;">D</div>
+   <div style="background-color: blueviolet;">E</div>
+   <div style="background-color: limegreen;">F</div>
+   </div>
+</section>
+
+   <section class="containerGridArea">
+      <div class="yellow a1">A1</div>
+      <div class="yellow a2">A2</div>
+      <div class="yellow a3">A3</div>
+      <div class="yellow a4">A4</div>
+      <div class="orange b1">B1</div>
+      <div class="orange b2">B2</div>
+      <div class="orange b3">B3</div>
+      <div class="cyan c1">C1</div>
+      <div class="cyan c2">C2</div>
+   </section>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
